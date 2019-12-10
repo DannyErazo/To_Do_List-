@@ -13,9 +13,8 @@ class App extends Component {
 
   list : [
 
-    {task:'example_1'},
-    {task:'example_2'},
-    {task:'example_3'},
+    
+    
   ], 
 
   value: ''
@@ -49,17 +48,18 @@ submitHandler=(event)=>{
 
  
 
-// this.setState(state => {
+this.setState(state => {
 
-// const list = state.list.push(state.value);
+  const list = [...state.list, {task:state.value}];
+console.log(list);
 
-// return {
+return {
 
-//   list,
-//   value: '',
+  list,
+  value: ''
 
 
-// }})
+};})
 
 
    event.preventDefault()
@@ -78,17 +78,29 @@ submitHandler=(event)=>{
 
   // Dynamic Components 
 
+let show = '';
+
+if (this.state.task != ''){
 
 
   
-    const taskList = this.state.list.map((l,index)=>{
 
-      return <ListComponent 
-      task={l.task} 
-      clicked={() => this.deleteTaskHandler(index)} 
+  const copy = [...this.state.list];
+  
+  show = copy.map((l,index)=>{
 
-      key={index}/>
-    })
+    return (<ListComponent 
+    task={l.task} 
+
+    clicked={() => this.deleteTaskHandler(index)} 
+
+    key={index}/>)
+  })
+
+
+}
+
+
   
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -103,7 +115,7 @@ submitHandler=(event)=>{
 
       <Submit submit = {this.submitHandler} value = {this.state.value} changed = {this.inputChangeHandler}/>
       
-     {taskList}
+     {show}
         </div>
       );
     }
