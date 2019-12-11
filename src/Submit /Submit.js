@@ -1,4 +1,5 @@
 import React from 'react';
+import './Submit.css';
 
 
 
@@ -7,7 +8,7 @@ const Submit =(props)=>{
 
 return(
 
-<div class= 'submission'> 
+<div class = 'Sub' > 
     <form onSubmit = {props.submit}>
 <label>  
 

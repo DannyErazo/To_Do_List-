@@ -12,20 +12,16 @@ class App extends Component {
   state = {
 
   list : [
-
-    
-    
+   
   ], 
 
   value: ''
-
-  
   }
 
 
 // Group of Handlers 
 
-  deleteTaskHandler=(index)=>{
+deleteTaskHandler=(index)=>{
 
 const taskList= [...this.state.list];
 taskList.splice(index,1);
@@ -33,9 +29,6 @@ taskList.splice(index,1);
 this.setState(
 
   {list:taskList});
-
-  
-
   }
   
 
@@ -78,17 +71,14 @@ return {
 
   // Dynamic Components 
 
-let show = '';
-
-if (this.state.task != ''){
 
 
-  
 
   const copy = [...this.state.list];
   
-  show = copy.map((l,index)=>{
+  let  show = copy.map((l,index)=>{
 
+    
     return (<ListComponent 
     task={l.task} 
 
@@ -98,7 +88,7 @@ if (this.state.task != ''){
   })
 
 
-}
+
 
 
   
