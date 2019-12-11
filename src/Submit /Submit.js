@@ -9,12 +9,13 @@ const Submit =(props)=>{
 return(
 
 <div class = 'Sub' > 
-    <form onSubmit = {props.submit}>
-<label>  
+    <form className = 'form' onSubmit = {props.submit}>
+
 
 <textarea value = {props.value} onChange = {props.changed}/>
-<input type='submit' value = 'submit'/>
-</label>
+<br></br>
+<input type='submit' value = 'submit' className='input'/>
+
       
 
 

@@ -98,14 +98,17 @@ return {
 
       return (
         <div className="App">
-         
-   <h1>To Do List</h1>
+  <div className = 'main'>
+  <h1>To Do List</h1>
         <br></br>
-
-
       <Submit submit = {this.submitHandler} value = {this.state.value} changed = {this.inputChangeHandler}/>
       
-     {show}
+  </div>
+  <br></br>
+  <div className="task">
+  {show}
+  </div>
+     
         </div>
       );
     }

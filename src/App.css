@@ -1,5 +1,45 @@
 .App {
-  margin: 16px;
+  background:#34495e;
+  color:white;
+  text-align:center;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:10pt;
+  border:10px solid black;
+  border-radius: 35px;
+  margin:25px;
   display: flex;
+
+  
+  
+
+
+}
+
+.main{
+  text-align: center;
+  display: block;
   justify-content: center;
+ 
+  width:30%;
+  min-width: 500px;
+  height:500px;
+  padding:40px;
+}
+
+.task{
+width: 70%;;
+min-width: 1000px;
+display:block;
+
+
+}
+
+h1{
+  font-family: Arial, sans-serif;
+  font-size: 5em;
+}
+
+
+input{
+  background-color: none;
 }
